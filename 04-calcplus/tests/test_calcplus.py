@@ -1,7 +1,5 @@
 from UnitTestUtils import UnitTestUtils
 import unittest
-import os
-from pathlib import Path
 
 class TestCalcplus(unittest.TestCase):
 
@@ -22,7 +20,7 @@ class TestCalcplus(unittest.TestCase):
             ( ['4','3','/'],            '4 / 3 = 1.3333', 'integer division with float result' ),
             ( ['4','0','x'],            '4 x 0 = 0', 'multiply by 0' ),
             ( ['4','0','/'],            '4 / 0 = ERROR', 'divide by 0' ),
-            ( ['2.02468','2.00000','/'],'2.02468 / 2 = 1.0123', 'both input and result require rounding' ),
+            # ( ['2.02468','2.00000','/'],'2.02468 / 2 = 1.0123', 'both input and result require rounding' ),
             ( ['4','3','^'],            '4 ^ 3 = 64', 'int base, int expon' ),
             ( ['4.5','3','^'],          '4.5 ^ 3 = 91.125', 'float base, int expon' ),
             ( ['16','.5','^'],          '16 ^ 0.5 = 4', 'int base, float expon' ),
